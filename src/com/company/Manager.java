@@ -12,18 +12,12 @@ public class Manager extends User {
 
         Random rnd = new Random();
         this.id = 100000 + rnd.nextInt(900000);  //There needs to be a check for pre-existing id's
-
     }
-
-    //method returns array of users possessions (stock)
-    public void getUsersPossesions(){}
 
     public void getUsers(ArrayList<User> user_list){
         this.user_list = user_list;
     }
-
     //somehow the manager class needs access to it's parent objects users arraylist
-
 
     public void findUser(String name){
         for (User i : user_list) {
@@ -45,13 +39,11 @@ public class Manager extends User {
         }
     }
 
-
     public void outputUserList(){
         int counter = 1;
         for (User i : user_list) {
             System.out.printf("#%d). User Id: %d -- User Name:  %s -- Computers Owned: %d\n", counter, i.id, i.name, i.stock.size());
             counter++;
-
         }
     }
 
@@ -68,6 +60,4 @@ public class Manager extends User {
         return (user_list);
     }
 
-    //method uses the index of a users computer and removes their computer
-    public void removeUsersStock(){}
 }

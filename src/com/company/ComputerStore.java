@@ -26,6 +26,7 @@ public class ComputerStore {
     }
 
     public void login(){
+        Scanner input = new Scanner(System.in);//in case of overflow
         System.out.println("Enter name: ");
         String name = input.nextLine();
         if (validateName(name)){
@@ -44,7 +45,7 @@ public class ComputerStore {
                 //This runs when the account name is matched with a User account
                 else if (current_user instanceof User){ runClient(current_user); }
                     //I just need the compiler to differentiate between a user without a manager child branch
-                System.out.println("Exiting program.....");
+                System.out.println("Logging out " +current_user.name + " .....");
 
                 //else runs when password does not match the name entered earlier
             } else {
